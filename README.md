@@ -13,6 +13,14 @@ Visit `http://localhost:8080/east` and `http://localhost:8080/west` to see it wo
 
 What I want is `http://localhost:8080/west#abc` will render `RegionRoute West` as well.
 
-Or
 
-visit https://rnons.github.io/purescript-routing-issue-60 instead.
+
+### These are good
+
+![east](./east.png)
+![west](./west.png)
+
+
+### This is not what I want
+
+![west-with-hash](./west-with-hash.png)
