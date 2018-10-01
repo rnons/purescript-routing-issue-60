@@ -1,0 +1,18 @@
+{
+  "name": "purescript-routing-issue-60",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "output",
+    "docs"
+  ],
+  "dependencies": {
+    "purescript-halogen": "https://github.com/slamdata/purescript-halogen.git#e43096ccde699f68f1803acd23bab493a7190e2c",
+    "purescript-routing": "^8.0.0"
+  },
+  "devDependencies": {
+    "purescript-psci-support": "^4.0.0"
+  }
+}
