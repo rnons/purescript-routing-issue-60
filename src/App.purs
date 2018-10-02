@@ -34,6 +34,7 @@ render state =
         RegionRoute region -> case region of
           East -> HH.text "east route"
           West -> HH.text "west route"
+        _ -> HH.text "home page"
     ]
   ]
 

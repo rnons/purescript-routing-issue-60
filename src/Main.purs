@@ -2,15 +2,15 @@ module Main where
 
 import Prelude
 
-import Effect.Aff (launchAff_)
-import Effect (Effect)
-
 import App (Query(..), app)
-import PageRoute (pageRoute)
+import Effect (Effect)
+import Effect.Aff (launchAff_)
 import Halogen as H
 import Halogen.Aff (awaitBody, runHalogenAff)
 import Halogen.VDom.Driver (runUI)
-import Routing.PushState (makeInterface, matches)
+import PageRoute (pageRoute)
+import Routing.Duplex as RD
+import Routing.PushState (makeInterface, matchesWith)
 
 main :: Effect Unit
 main = do
@@ -19,5 +19,5 @@ main = do
     body <- awaitBody
     app' <- runUI app unit body
 
-    H.liftEffect $ router # matches pageRoute \_ route ->
+    H.liftEffect $ router # matchesWith (RD.parse pageRoute) \_ route ->
       launchAff_ $ app'.query (H.action $ RouteChange route)
