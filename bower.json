@@ -11,9 +11,10 @@
   "dependencies": {
     "purescript-halogen": "https://github.com/slamdata/purescript-halogen.git#e43096ccde699f68f1803acd23bab493a7190e2c",
     "purescript-routing": "^8.0.0",
-    "purescript-routing-duplex": "https://github.com/natefaubion/purescript-routing-duplex.git#94dd7e4ae10c23b19949331e9515f98d3d3006a7"
+    "purescript-routing-duplex": "https://github.com/natefaubion/purescript-routing-duplex.git#343bf5ab4293e652b4df7dc85a5b654fffcda218"
   },
   "devDependencies": {
-    "purescript-psci-support": "^4.0.0"
+    "purescript-psci-support": "^4.0.0",
+    "purescript-debug": "^4.0.0"
   }
 }
