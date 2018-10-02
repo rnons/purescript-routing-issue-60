@@ -3,7 +3,7 @@ module PageRoute where
 import Prelude
 
 import Data.Generic.Rep (class Generic)
-import Routing.Duplex (RouteDuplex', root)
+import Routing.Duplex (RouteDuplex', path, root)
 import Routing.Duplex.Generic (noArgs)
 import Routing.Duplex.Generic as RDG
 
@@ -27,6 +27,6 @@ pageRoute =
   where
   regionRoute :: RouteDuplex' Region
   regionRoute = RDG.sum
-    { "East": noArgs
-    , "West": noArgs
+    { "East": path "east" noArgs
+    , "West": path "west" noArgs
     }
